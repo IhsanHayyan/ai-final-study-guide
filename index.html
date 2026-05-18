@@ -106,7 +106,51 @@
       .subtopic-layout, .grid-3, .grid-2 { grid-template-columns: 1fr; }
       .page { padding: 22px 16px; }
     }
-  </style>
+
+    /* PAST_PAPER_CSS_START */
+    .past-paper-nav { border-top: 1px solid var(--border); margin-top: 12px; padding-top: 12px; }
+    .paper-summary .big-num { font-size: 28px; }
+    .paper-stack { display: grid; gap: 16px; }
+    .paper-question { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 18px; box-shadow: 0 18px 45px rgba(0,0,0,.18); }
+    .paper-question h3 { margin: 6px 0 12px; font-size: 18px; line-height: 1.35; color: var(--text); }
+    .question-kicker { color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+    .option-list { display: grid; gap: 8px; margin: 12px 0; padding-left: 20px; color: var(--text2); }
+    .answer-line { margin: 12px 0; }
+    .answer-badge { display: inline-flex; align-items: center; min-height: 28px; padding: 4px 10px; border-radius: 999px; background: rgba(0, 229, 255, .12); border: 1px solid rgba(0, 229, 255, .35); color: var(--accent); font-weight: 800; }
+    .paper-tip { margin-top: 12px; border-left: 3px solid var(--green); padding: 10px 12px; background: rgba(57, 255, 136, .06); color: var(--text2); }
+    .exam-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; overflow: hidden; border-radius: 10px; }
+    .exam-table th, .exam-table td { border: 1px solid var(--border); padding: 10px; vertical-align: top; }
+    .exam-table th { background: rgba(0, 229, 255, .08); color: var(--accent); text-align: left; }
+    .small-table td:first-child { width: 110px; color: var(--yellow); font-weight: 800; }
+    .mark-list { display: grid; gap: 8px; padding-left: 20px; margin: 12px 0; color: var(--text2); }
+    .structured-answer code { color: var(--yellow); background: rgba(255, 211, 77, .08); padding: 2px 6px; border-radius: 6px; }
+    .paper-diagram { margin: 14px 0; background: #101827; border: 1px solid rgba(0,229,255,.22); border-radius: 14px; padding: 12px; overflow: auto; }
+    .paper-diagram .mermaid { min-width: 420px; }
+    @media (max-width: 760px) { .paper-question { padding: 14px; } .exam-table { font-size: 12px; } .paper-diagram .mermaid { min-width: 320px; } }
+    /* PAST_PAPER_CSS_END */
+    
+    /* PAST_PAPER_CSS_START */
+    .past-paper-nav { border-top: 1px solid var(--border); margin-top: 12px; padding-top: 12px; }
+    .paper-summary .big-num { font-size: 28px; }
+    .paper-stack { display: grid; gap: 16px; }
+    .paper-question { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 18px; box-shadow: 0 18px 45px rgba(0,0,0,.18); }
+    .paper-question h3 { margin: 6px 0 12px; font-size: 18px; line-height: 1.35; color: var(--text); }
+    .question-kicker { color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+    .option-list { display: grid; gap: 8px; margin: 12px 0; padding-left: 0; color: var(--text2); list-style: none; }
+    .answer-line { margin: 12px 0; }
+    .answer-badge { display: inline-flex; align-items: center; min-height: 28px; padding: 4px 10px; border-radius: 999px; background: rgba(0, 229, 255, .12); border: 1px solid rgba(0, 229, 255, .35); color: var(--accent); font-weight: 800; }
+    .paper-tip { margin-top: 12px; border-left: 3px solid var(--green); padding: 10px 12px; background: rgba(57, 255, 136, .06); color: var(--text2); }
+    .exam-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; overflow: hidden; border-radius: 10px; }
+    .exam-table th, .exam-table td { border: 1px solid var(--border); padding: 10px; vertical-align: top; }
+    .exam-table th { background: rgba(0, 229, 255, .08); color: var(--accent); text-align: left; }
+    .small-table td:first-child { width: 110px; color: var(--yellow); font-weight: 800; }
+    .mark-list { display: grid; gap: 8px; padding-left: 20px; margin: 12px 0; color: var(--text2); }
+    .structured-answer code { color: var(--yellow); background: rgba(255, 211, 77, .08); padding: 2px 6px; border-radius: 6px; }
+    .paper-diagram { margin: 14px 0; background: #101827; border: 1px solid rgba(0,229,255,.22); border-radius: 14px; padding: 12px; overflow: auto; }
+    .paper-diagram .mermaid { min-width: 420px; }
+    @media (max-width: 760px) { .paper-question { padding: 14px; } .exam-table { font-size: 12px; } .paper-diagram .mermaid { min-width: 320px; } }
+    /* PAST_PAPER_CSS_END */
+      </style>
 </head>
 <body>
   <div class="app">
@@ -181,7 +225,25 @@
             </button>
             
       </div>
-    </nav>
+
+      
+      <!-- PAST_PAPER_NAV_START -->
+      <div class="nav-section past-paper-nav">
+        <div class="nav-label">Past Paper Answers</div>
+        <button class="nav-item paper-nav-item" type="button" data-target="past-sem2-2324" data-search="Past Paper Answers - Semester 2 2023/2024 Artificial intelligence-CSNB4133-sem 2 2324.pdf">
+              <span class="nav-num">PP</span>
+              <span>Sem 2 23/24</span>
+            </button><button class="nav-item paper-nav-item" type="button" data-target="past-sem1-2425" data-search="Past Paper Answers - Semester 1 2024/2025 Artificial intelligence-CSNB4133-Semester 1, 2024_2025.pdf">
+              <span class="nav-num">PP</span>
+              <span>Sem 1 24/25</span>
+            </button><button class="nav-item paper-nav-item" type="button" data-target="past-sem2-2425" data-search="Past Paper Answers - Semester 2 2024/2025 CSNB4133 -AI -Final Exam - Sem 2 2024 2025.pdf">
+              <span class="nav-num">PP</span>
+              <span>Sem 2 24/25</span>
+            </button>
+      </div>
+      <!-- PAST_PAPER_NAV_END -->
+    
+        </nav>
     <main class="main">
       <section class="page active" id="overview">
         <div class="page-header">
@@ -6308,6 +6370,983 @@
             
     </section>
     
+<!-- PAST_PAPER_ANSWERS_START -->
+
+      <section class="page past-paper-page" id="past-sem2-2324">
+        <div class="page-header">
+          <div class="page-tag">Past Paper Answers</div>
+          <h1 class="page-title">Past Paper Answers - Semester 2 2023/2024</h1>
+          <p class="page-desc">Artificial intelligence-CSNB4133-sem 2 2324.pdf. Answers are written from the provided AI lecture notes and the question paper content only.</p>
+        </div>
+        <div class="grid-3 paper-summary">
+          <div class="card card-accent"><div class="card-title">Section A</div><div class="big-num">20</div><p>Every MCQ includes all options, answer, explanation, false-option reasons, and a memory tip.</p></div>
+          <div class="card card-green"><div class="card-title">Section B</div><div class="big-num">10</div><p>Structured answers use bullets, tables for comparisons, calculations, and diagrams where needed.</p></div>
+          <div class="card card-yellow"><div class="card-title">Exam Focus</div><div class="big-num">AI</div><p>Logic, search, semantic networks, fuzzy logic, ML, neural networks, and generative AI.</p></div>
+        </div>
+        <div class="section-title">Section A - Multiple Choice Answers</div>
+        <div class="paper-stack">
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 1</div>
+        <h3>All the following are goals of AI research, EXCEPT:</h3>
+        <ol class="option-list"><li><strong>A.</strong> Creating systems that can reason with incomplete information</li><li><strong>B.</strong> Engineering machines that possess consciousness</li><li><strong>C.</strong> Developing algorithms that can learn from data</li><li><strong>D.</strong> Designing programs that can solve problems autonomously</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> The lecture notes discuss reasoning, learning from data, and problem solving as AI aims. They do not treat machine consciousness as a normal practical goal.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Reasoning with incomplete information matches AI reasoning and uncertainty work.</td></tr><tr><td>C</td><td>Learning from data matches machine learning.</td></tr><tr><td>D</td><td>Autonomous problem solving is part of intelligent behaviour.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> When the question says EXCEPT, choose the option that sounds least like a practical AI task in the notes.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 2</div>
+        <h3>The purpose of the Turing Test is to assess:</h3>
+        <ol class="option-list"><li><strong>A.</strong> A computer&#x27;s ability to show behaviour indistinguishable from a human&#x27;s</li><li><strong>B.</strong> A computer&#x27;s computational speed compared to a human&#x27;s</li><li><strong>C.</strong> The physical resemblance of a machine to a human</li><li><strong>D.</strong> A machine&#x27;s ability to perform complex calculations faster than a human</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: A</span></div>
+        <p><strong>Why it is correct:</strong> The notes say the Turing Test checks whether a questioner can tell a machine apart from a human through its answers.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>B</td><td>Speed is not what the Turing Test measures.</td></tr><tr><td>C</td><td>The test is about responses, not physical appearance.</td></tr><tr><td>D</td><td>Fast calculation is not the same as human-like behaviour.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Remember: Turing Test = can the machine pass as human in conversation?</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 3</div>
+        <h3>What is the main purpose of using logic in AI?</h3>
+        <ol class="option-list"><li><strong>A.</strong> To program the AI&#x27;s basic algorithms</li><li><strong>B.</strong> To create a framework for knowledge representation and reasoning</li><li><strong>C.</strong> To increase the processing speed of AI algorithms</li><li><strong>D.</strong> To increase the processing accuracy of AI algorithms</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> The logic chapter says logic gives AI a formal way to represent facts, rules, and relationships, then reason from them.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Logic can support programs, but this is too general.</td></tr><tr><td>C</td><td>Logic is about meaning and reasoning, not mainly speed.</td></tr><tr><td>D</td><td>Accuracy can improve through good reasoning, but that is not the main definition.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Logic questions usually point to knowledge representation plus reasoning.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 4</div>
+        <h3>In the context of logical reasoning, what does Modus Tollens mean?</h3>
+        <ol class="option-list"><li><strong>A.</strong> If P implies Q and Q is true, then P is also true</li><li><strong>B.</strong> If P implies Q and P is true, then Q must be true</li><li><strong>C.</strong> If P implies Q and P is false, then Q must also be false</li><li><strong>D.</strong> If P implies Q and Q is false, then P must also be false</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: D</span></div>
+        <p><strong>Why it is correct:</strong> Modus Tollens follows: if P leads to Q, and Q is false, then P must be false.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>This wrongly works backward from Q being true.</td></tr><tr><td>B</td><td>This is Modus Ponens, not Modus Tollens.</td></tr><tr><td>C</td><td>P being false does not prove Q is false.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Modus Tollens: deny the result, then deny the cause.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 5</div>
+        <h3>How does predicate logic differ from propositional logic?</h3>
+        <ol class="option-list"><li><strong>A.</strong> It deals only with binary variables</li><li><strong>B.</strong> It is not as formal as propositional logic</li><li><strong>C.</strong> It can represent relationships and properties of objects</li><li><strong>D.</strong> It simplifies expressions to true or false values without variables</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: C</span></div>
+        <p><strong>Why it is correct:</strong> The notes distinguish predicate logic by its ability to talk about objects, properties, relationships, and quantities.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>That describes a simpler view closer to propositional logic.</td></tr><tr><td>B</td><td>Predicate logic is formal too.</td></tr><tr><td>D</td><td>This describes propositional logic more closely.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Predicate logic is for statements with who, what, and relationships.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 6</div>
+        <h3>In the context of AI, what does the term knowledge representation refer to?</h3>
+        <ol class="option-list"><li><strong>A.</strong> The physical storage of information in a database</li><li><strong>B.</strong> Translating human knowledge into a format understandable by machines</li><li><strong>C.</strong> Creating new knowledge through machine learning algorithms</li><li><strong>D.</strong> Representing data in graphical formats for user interpretations</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> Knowledge representation means putting knowledge into structured forms machines can process.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>A database may store data, but representation is about structure and meaning.</td></tr><tr><td>C</td><td>That is learning, not representation.</td></tr><tr><td>D</td><td>Graphs can help, but user display is not the core idea.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Think: human knowledge converted into machine-friendly facts, rules, or networks.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 7</div>
+        <h3>What best describes the role of the inference engine in an expert system?</h3>
+        <ol class="option-list"><li><strong>A.</strong> To store knowledge in a structured format</li><li><strong>B.</strong> To process input data and provide output</li><li><strong>C.</strong> To interact directly with the user to gather new data</li><li><strong>D.</strong> To apply inference rules to derive conclusions from known facts</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: D</span></div>
+        <p><strong>Why it is correct:</strong> The inference engine applies rules to known facts so the expert system can reach conclusions.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>That is the knowledge base.</td></tr><tr><td>B</td><td>Too general; it misses rule-based reasoning.</td></tr><tr><td>C</td><td>That is closer to a user interface or data entry part.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Inference engine = rule applier.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 8</div>
+        <h3>What does backward chaining mean in rule-based systems?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Adding new rules to the system dynamically</li><li><strong>B.</strong> Deleting outdated rules from the back of the system</li><li><strong>C.</strong> Visualizing data in a chain that starts from the bottom to the top</li><li><strong>D.</strong> Starting with a goal and working to find the supporting facts to prove it</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: D</span></div>
+        <p><strong>Why it is correct:</strong> Backward chaining starts with the goal and looks backward for facts and rules that support it.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>It is not about editing the rule base.</td></tr><tr><td>B</td><td>It is not deleting rules.</td></tr><tr><td>C</td><td>It is reasoning direction, not a drawing style.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Backward chaining = start at the conclusion and ask what facts would prove it.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 9</div>
+        <h3>Which algorithm is an example of an uninformed search strategy?</h3>
+        <ol class="option-list"><li><strong>A.</strong> A* search</li><li><strong>B.</strong> Breadth-first search</li><li><strong>C.</strong> Best-first search</li><li><strong>D.</strong> Hill-climbing search</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> The search notes list breadth-first search as blind or uninformed because it searches row by row without heuristic knowledge.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>A* uses heuristic information.</td></tr><tr><td>C</td><td>Best-first search uses a heuristic score.</td></tr><tr><td>D</td><td>Hill-climbing uses heuristic guidance.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Uninformed search does not use a clever estimate. BFS is the safe exam answer.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 10</div>
+        <h3>What is the main advantage of using machine learning over traditional programming?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Machine learning finds a pattern when we cannot define the math behind it</li><li><strong>B.</strong> Machine learning programs require less computing power</li><li><strong>C.</strong> Machine learning eliminates the need for data</li><li><strong>D.</strong> Machine learning does not require any type of algorithms</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: A</span></div>
+        <p><strong>Why it is correct:</strong> The notes say ML is useful when a pattern exists, but humans cannot easily write the exact rules by hand.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>B</td><td>ML can require heavy computation.</td></tr><tr><td>C</td><td>ML needs data.</td></tr><tr><td>D</td><td>ML still uses algorithms.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Traditional programming needs rules first; ML learns rules from examples.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 11</div>
+        <h3>What is the primary objective in unsupervised learning?</h3>
+        <ol class="option-list"><li><strong>A.</strong> To predict the outcomes for new data points</li><li><strong>B.</strong> To find hidden patterns in unlabelled data</li><li><strong>C.</strong> To map inputs to outputs in the given examples</li><li><strong>D.</strong> To label new data based on past data</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> Unsupervised learning looks for structure in data that has no given labels.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>That sounds like supervised prediction.</td></tr><tr><td>C</td><td>That describes labelled input-output learning.</td></tr><tr><td>D</td><td>That is classification using labels.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Unsupervised = no labels, find patterns.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 12</div>
+        <h3>In machine learning, what is reinforcement learning primarily focused on?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Improving prediction accuracy of classification</li><li><strong>B.</strong> Identifying and categorizing objects in images</li><li><strong>C.</strong> Learning to make decisions based on rewards or penalties</li><li><strong>D.</strong> Analysing large volumes of textual data</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: C</span></div>
+        <p><strong>Why it is correct:</strong> Reinforcement learning is about trial-and-error decisions guided by rewards or penalties.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>That is ordinary model evaluation for classification.</td></tr><tr><td>B</td><td>That is usually image classification or object detection.</td></tr><tr><td>D</td><td>That is NLP or text analytics.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Reinforcement learning = actions plus rewards.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 13</div>
+        <h3>Which problem in machine learning makes models good with training data but poor with test data?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Overfitting</li><li><strong>B.</strong> Underfitting</li><li><strong>C.</strong> Data leakage</li><li><strong>D.</strong> Algorithm bias</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: A</span></div>
+        <p><strong>Why it is correct:</strong> Overfitting means the model fits training data too closely and performs badly on new test data.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>B</td><td>Underfitting is bad on both training and test data because the model is too simple.</td></tr><tr><td>C</td><td>Data leakage is a separate data preparation problem.</td></tr><tr><td>D</td><td>Bias can cause unfair or wrong patterns, but the described training-good/test-poor pattern is overfitting.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Training high, testing low = overfitting.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 14</div>
+        <h3>Decision trees use splitting criteria to determine the best way to divide data at each node. Which of the following is NOT a common splitting criterion?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Gini Index</li><li><strong>B.</strong> Information Gain</li><li><strong>C.</strong> Cross-entropy</li><li><strong>D.</strong> Mean Absolute Error (MAE)</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: D</span></div>
+        <p><strong>Why it is correct:</strong> The decision-tree notes focus on split criteria such as Gini and information gain. MAE is a regression error metric, not the usual classification split criterion.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Gini Index is a common decision-tree split measure.</td></tr><tr><td>B</td><td>Information Gain is a common decision-tree split measure.</td></tr><tr><td>C</td><td>Cross-entropy can be used as a classification impurity/loss idea.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> If it sounds like a regression error metric, it is likely not the split criterion here.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 15</div>
+        <h3>Which of the following is a common metric to evaluate the performance of linear regression models?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Accuracy</li><li><strong>B.</strong> Precision</li><li><strong>C.</strong> Mean Squared Error (MSE)</li><li><strong>D.</strong> F1-score</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: C</span></div>
+        <p><strong>Why it is correct:</strong> Linear regression predicts continuous values, so an error-size metric such as MSE fits it.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Accuracy is for classification.</td></tr><tr><td>B</td><td>Precision is for classification.</td></tr><tr><td>D</td><td>F1-score is for classification.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Regression uses distance/error. Classification uses labels and counts.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 16</div>
+        <h3>Which of the following is a nonparametric machine learning method?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Linear regression</li><li><strong>B.</strong> Logistic regression</li><li><strong>C.</strong> Perceptron</li><li><strong>D.</strong> K-nearest neighbour</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: D</span></div>
+        <p><strong>Why it is correct:</strong> K-nearest neighbour stores examples and predicts from nearby examples instead of fitting a fixed equation first.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Linear regression fits fixed parameters.</td></tr><tr><td>B</td><td>Logistic regression fits fixed parameters.</td></tr><tr><td>C</td><td>Perceptron learns weights as parameters.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> KNN = keep neighbours, decide later.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 17</div>
+        <h3>Which of the following is NOT an activation function commonly used in ANNs?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Sigmoid</li><li><strong>B.</strong> ReLU</li><li><strong>C.</strong> Tanh</li><li><strong>D.</strong> Cosine</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: D</span></div>
+        <p><strong>Why it is correct:</strong> The neural-network notes commonly use activation functions such as sigmoid, ReLU, tanh, and step. Cosine is not listed as a common ANN activation here.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Sigmoid is a common activation.</td></tr><tr><td>B</td><td>ReLU is a common activation.</td></tr><tr><td>C</td><td>Tanh is a common activation.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Memorise the common set: sigmoid, ReLU, tanh, step.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 18</div>
+        <h3>Which deep learning technique is often the core of object detection systems?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Convolutional Neural Networks (CNNs)</li><li><strong>B.</strong> Recurrent Neural Networks (RNNs)</li><li><strong>C.</strong> Generative adversarial networks (GANs)</li><li><strong>D.</strong> Support Vector Machines (SVMs)</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: A</span></div>
+        <p><strong>Why it is correct:</strong> CNNs are designed for image and spatial data, and the notes link them to computer vision tasks.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>B</td><td>RNNs are for sequence data.</td></tr><tr><td>C</td><td>GANs generate data rather than directly serving as the usual object-detection core.</td></tr><tr><td>D</td><td>SVMs are traditional ML, not the deep-learning core for object detection.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Image/object detection question? Think CNN first.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 19</div>
+        <h3>Which of these is NOT a direct application of image classification?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Facial recognition systems</li><li><strong>B.</strong> Autonomous vehicle navigation</li><li><strong>C.</strong> Medical image analysis, such as tumour detection</li><li><strong>D.</strong> Generating new images from text descriptions</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: D</span></div>
+        <p><strong>Why it is correct:</strong> Generating images from text is generative AI, not image classification.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Facial recognition is image-based classification/recognition.</td></tr><tr><td>B</td><td>Autonomous vehicle vision can use image recognition.</td></tr><tr><td>C</td><td>Medical tumour detection is image analysis/classification.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Classification chooses a label. Generation creates new content.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 20</div>
+        <h3>LLMs like ChatGPT are examples of:</h3>
+        <ol class="option-list"><li><strong>E.</strong> Sequence-to-sequence models</li><li><strong>F.</strong> Text classification models</li><li><strong>G.</strong> Autoregressive language models</li><li><strong>H.</strong> Convolutional neural networks</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: G</span></div>
+        <p><strong>Why it is correct:</strong> The generative AI notes connect LLMs with generating language. ChatGPT-style models generate text step by step, so the best listed answer is autoregressive language models.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>E</td><td>Sequence-to-sequence is a broad model type, but it is not the best listed description for ChatGPT here.</td></tr><tr><td>F</td><td>Text classification assigns labels; ChatGPT generates text.</td></tr><tr><td>H</td><td>CNNs are mainly for images and spatial data.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> ChatGPT is a text generator, not just a text classifier.</p>
+      </article>
+    </div>
+        <div class="section-title">Section B - Structured Answers</div>
+        <div class="paper-stack">
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 1</div>
+        <h3>Question 1 - Semantic network for car knowledge [6 marks]</h3>
+        <p><strong>Question rewritten:</strong> Create a semantic network from: every car is a vehicle; every sedan is a car; sedan has doors and uses gasoline; vehicles have wheels; wheels have black color.</p>
+        <div class="paper-diagram diagram-box"><pre class="mermaid">flowchart TD
+  Sedan[&quot;Sedan&quot;] --&gt;|&quot;is a&quot;| Car[&quot;Car&quot;]
+  Car --&gt;|&quot;is a&quot;| Vehicle[&quot;Vehicle&quot;]
+  Sedan --&gt;|&quot;has&quot;| Doors[&quot;Doors&quot;]
+  Sedan --&gt;|&quot;uses&quot;| Gasoline[&quot;Gasoline&quot;]
+  Vehicle --&gt;|&quot;has&quot;| Wheels[&quot;Wheels&quot;]
+  Wheels --&gt;|&quot;has color&quot;| Black[&quot;Black&quot;]</pre></div>
+        <div class="structured-answer"><ul class='mark-list'><li>Draw Sedan, Car, Vehicle, Doors, Gasoline, Wheels, and Black as nodes.</li><li>Connect Sedan to Car using an 'is a' edge.</li><li>Connect Car to Vehicle using an 'is a' edge.</li><li>Connect Sedan to Doors using a 'has' edge.</li><li>Connect Sedan to Gasoline using a 'uses' edge.</li><li>Connect Vehicle to Wheels, then Wheels to Black.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> For semantic networks, turn nouns into nodes and verbs such as &#x27;is a&#x27;, &#x27;has&#x27;, and &#x27;uses&#x27; into arrows.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 2</div>
+        <h3>Question 2 - BFS and DFS traversal to goal node 8 [6 marks]</h3>
+        <p><strong>Question rewritten:</strong> Given the search tree with root 1 and goal node 8, find the traversal order for Breadth-First Search and Depth-First Search.</p>
+        <div class="paper-diagram diagram-box"><pre class="mermaid">flowchart TD
+  N1[&quot;1&quot;] --&gt; N4[&quot;4&quot;]
+  N1 --&gt; N6[&quot;6&quot;]
+  N6 --&gt; N2[&quot;2&quot;]
+  N6 --&gt; N3[&quot;3&quot;]
+  N2 --&gt; N5[&quot;5&quot;]
+  N2 --&gt; N7[&quot;7&quot;]
+  N2 --&gt; N8[&quot;8 goal&quot;]</pre></div>
+        <div class="structured-answer"><ul class='mark-list'><li>BFS visits level by level: 1.</li><li>Then it visits the next level: 4, 6.</li><li>Then it visits the children of 6: 2, 3.</li><li>Then it visits the children of 2 until goal: 5, 7, 8.</li><li>Final BFS order: 1, 4, 6, 2, 3, 5, 7, 8.</li><li>DFS goes deep left-to-right: 1, 4, 6, 2, 5, 7, 8.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> BFS reads rows. DFS follows one branch as deep as possible before backing up.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 3</div>
+        <h3>Question 3 - Propositional expressions [6 marks]</h3>
+        <p><strong>Question rewritten:</strong> Let p = &#x27;Hazli is smart&#x27;, q = &#x27;Hazli is rich&#x27;, and r = &#x27;Hazli is friendly&#x27;. Write the expressions.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>(a) Hazli is not rich, but smart and friendly: <code>&not;q &and; p &and; r</code>.</li><li>(b) Hazli is not both rich and friendly: <code>&not;(q &and; r)</code>.</li><li>(c) Hazli is smart, rich, and friendly: <code>p &and; q &and; r</code>.</li><li>(d) Hazli is smart or rich but not both: <code>(p &or; q) &and; &not;(p &and; q)</code>.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> &#x27;But&#x27; usually means AND. &#x27;Not both&#x27; means put NOT outside the pair.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 4</div>
+        <h3>Question 4 - Task type and learning type [9 marks]</h3>
+        <p><strong>Question rewritten:</strong> For each application, determine the task type and learning type.</p>
+        
+        <div class="structured-answer"><table class="exam-table"><thead><tr><th>Scenario</th><th>Task type</th><th>Learning type</th><th>Reason</th></tr></thead><tbody><tr><td>Fraudulent credit card transactions from previous transactions</td><td>Classification</td><td>Supervised</td><td>Fraud/not fraud is a label learned from past examples.</td></tr><tr><td>Estimating age from browsing patterns</td><td>Regression</td><td>Supervised</td><td>Age is a continuous number.</td></tr><tr><td>Customer feedback as positive, neutral, or negative</td><td>Classification</td><td>Supervised</td><td>Sentiment is a class label.</td></tr><tr><td>Books into genres without predefined labels</td><td>Clustering</td><td>Unsupervised</td><td>No labels are given, so the system groups similar books.</td></tr><tr><td>Predicting next month&#x27;s stock prices</td><td>Regression</td><td>Supervised</td><td>Price is a continuous number.</td></tr><tr><td>Grouping customers by browsing history</td><td>Clustering</td><td>Unsupervised</td><td>The system finds natural groups.</td></tr></tbody></table></div>
+        <p class="paper-tip"><strong>Tip:</strong> Ask two things: is the output a label, number, group, or action? Are labels given?</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 5</div>
+        <h3>Question 5 - Differences [12 marks]</h3>
+        <p><strong>Question rewritten:</strong> Differentiate the listed pairs.</p>
+        
+        <div class="structured-answer"><table class="exam-table"><thead><tr><th>Compared area</th><th>Item 1</th><th>Item 2</th><th>Exam phrase</th></tr></thead><tbody><tr><td>Learning data</td><td>Supervised learning uses labelled input-output examples.</td><td>Unsupervised learning uses unlabelled data to find patterns.</td><td>Labels vs no labels.</td></tr><tr><td>Prediction output</td><td>Regression predicts a continuous number.</td><td>Classification predicts a category.</td><td>Number vs class.</td></tr><tr><td>Tree count</td><td>Decision tree uses one tree.</td><td>Random forest uses many decision trees.</td><td>One tree vs forest.</td></tr><tr><td>Model purpose</td><td>Linear regression predicts continuous values.</td><td>Logistic regression predicts classes.</td><td>Number vs class probability.</td></tr><tr><td>Classification metric</td><td>Accuracy is total correct predictions divided by all predictions.</td><td>Precision is correct positive predictions divided by all positive predictions.</td><td>All correct vs positive correct.</td></tr><tr><td>Feature handling</td><td>Feature selection keeps useful original features.</td><td>Feature extraction creates new transformed features.</td><td>Keep vs create.</td></tr></tbody></table></div>
+        <p class="paper-tip"><strong>Tip:</strong> For difference questions, write one compared area first, then contrast both sides.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 6</div>
+        <h3>Question 6 - Perceptron outputs [6 marks]</h3>
+        <p><strong>Question rewritten:</strong> Weights are w1 = 0.2, w2 = 0.01, w3 = 0.7, bias b = -0.5. Step function outputs 0 if z &lt; 0 and 1 if z &gt;= 0.</p>
+        <div class="paper-diagram diagram-box"><pre class="mermaid">flowchart LR
+  X1[&quot;x1*w1&quot;] --&gt; Sum[&quot;weighted sum + bias&quot;]
+  X2[&quot;x2*w2&quot;] --&gt; Sum
+  X3[&quot;x3*w3&quot;] --&gt; Sum
+  Bias[&quot;b&quot;] --&gt; Sum
+  Sum --&gt; Step[&quot;step activation&quot;]
+  Step --&gt; Y[&quot;y&quot;]</pre></div>
+        <div class="structured-answer"><ul class='mark-list'><li>For X = [1, 1, 0], z = (1)(0.2) + (1)(0.01) + (0)(0.7) - 0.5.</li><li>z = 0.2 + 0.01 + 0 - 0.5 = -0.29.</li><li>Since z < 0, output y = 0.</li><li>For X = [0, 0, 1], z = 0 + 0 + 0.7 - 0.5 = 0.2.</li><li>Since z >= 0, output y = 1.</li><li>The step function is the activation function, also called a threshold function here.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> Always calculate z first, then apply the step rule at the end.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 7</div>
+        <h3>Question 7 - Bias, overfitting, underfitting, and polynomial regression [6 marks]</h3>
+        <p><strong>Question rewritten:</strong> Three real-estate price models are shown: linear, quadratic, and fourth-degree polynomial.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>Model (a), theta0 + theta1x, is too simple for the curved pattern: high bias or underfitting.</li><li>Model (b), theta0 + theta1x + theta2x^2, follows the trend well: free from the main issue.</li><li>Model (c), theta0 + theta1x + theta2x^2 + theta3x^3 + theta4x^4, is too wavy: low bias or overfitting.</li><li>To fix underfitting in (a), use a more flexible model such as polynomial terms.</li><li>To fix overfitting in (c), simplify the model, regularise it, or use more data.</li><li>The specific algorithm family is polynomial regression.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> Straight line missing a curve = underfit. Wiggly curve chasing points = overfit.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 8</div>
+        <h3>Question 8 - Medical diagnosis using records [8 marks]</h3>
+        <p><strong>Question rewritten:</strong> Historical medical records include lab results, symptoms, and confirmed diagnoses.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>Use supervised learning because confirmed diagnoses are labels.</li><li>A suitable model is a decision tree, random forest, SVM, or logistic regression.</li><li>The model learns from lab results and symptoms as inputs.</li><li>It predicts the diagnosis label as output.</li><li>Measure performance with accuracy, precision, recall, F1-score, and confusion matrix.</li><li>Recall is especially useful when missing a disease case is serious.</li><li>A challenge is noisy, incomplete, or imbalanced medical records.</li><li>Mitigate it by cleaning data, balancing classes, and keeping human expert review.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> Confirmed diagnosis in the dataset means supervised learning.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 9</div>
+        <h3>Question 9 - Medical diagnosis using images [6 marks]</h3>
+        <p><strong>Question rewritten:</strong> The input changes from lab records to medical images with confirmed diagnoses.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>The learning approach stays supervised because the diagnoses are still labels.</li><li>The input type changes to images, so image-focused models are better.</li><li>Use CNNs because the notes describe CNNs as suitable for image and computer vision tasks.</li><li>A deep neural network can also be used if designed for image input.</li><li>If images are not enough, use data augmentation to create useful variations.</li><li>Transfer learning can also help by starting from a model trained on many images.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> Image input normally points to CNN. Labelled image input means supervised CNN classification.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 10</div>
+        <h3>Question 10 - Generative AI examples [5 marks]</h3>
+        <p><strong>Question rewritten:</strong> Choose one field and list at least two examples of generative AI use.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>Chosen field: Marketing.</li><li>Generative AI can create personalised advertising copy for different customer groups.</li><li>It can generate social media captions, product descriptions, and email campaign drafts.</li><li>It can produce quick campaign ideas and content variations for testing.</li><li>It can support customer engagement through chatbot-style responses and personalised messages.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> For generative AI, use verbs like create, generate, draft, personalise, and automate content.</p>
+      </article>
+    </div>
+      </section>
+    
+      <section class="page past-paper-page" id="past-sem1-2425">
+        <div class="page-header">
+          <div class="page-tag">Past Paper Answers</div>
+          <h1 class="page-title">Past Paper Answers - Semester 1 2024/2025</h1>
+          <p class="page-desc">Artificial intelligence-CSNB4133-Semester 1, 2024_2025.pdf. Answers are written from the provided AI lecture notes and the question paper content only.</p>
+        </div>
+        <div class="grid-3 paper-summary">
+          <div class="card card-accent"><div class="card-title">Section A</div><div class="big-num">20</div><p>Every MCQ includes all options, answer, explanation, false-option reasons, and a memory tip.</p></div>
+          <div class="card card-green"><div class="card-title">Section B</div><div class="big-num">10</div><p>Structured answers use bullets, tables for comparisons, calculations, and diagrams where needed.</p></div>
+          <div class="card card-yellow"><div class="card-title">Exam Focus</div><div class="big-num">AI</div><p>Logic, search, semantic networks, fuzzy logic, ML, neural networks, and generative AI.</p></div>
+        </div>
+        <div class="section-title">Section A - Multiple Choice Answers</div>
+        <div class="paper-stack">
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 1</div>
+        <h3>What is the PRIMARY goal of Artificial Intelligence (AI)?</h3>
+        <ol class="option-list"><li><strong>A.</strong> To create machines that can surpass human intelligence</li><li><strong>B.</strong> To replace human jobs with machines</li><li><strong>C.</strong> To create machines that can do tasks typically requiring human intelligence</li><li><strong>D.</strong> To design robots that can perform physical tasks</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: C</span></div>
+        <p><strong>Why it is correct:</strong> The AI introduction defines AI as making systems able to do tasks that normally need human intelligence.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Surpassing humans is not the primary definition in the notes.</td></tr><tr><td>B</td><td>Replacing jobs is a risk/use case, not the main goal.</td></tr><tr><td>D</td><td>Physical robots are only one possible AI application.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Use the broad definition: AI performs human-like intelligent tasks.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 2</div>
+        <h3>What was the Turing Test designed to determine?</h3>
+        <ol class="option-list"><li><strong>A.</strong> That a machine can exhibit indistinguishable behaviour from a human</li><li><strong>B.</strong> The physical abilities of a machine</li><li><strong>C.</strong> The emotional capacity of a computer</li><li><strong>D.</strong> The ability of a computer to solve mathematical problems</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: A</span></div>
+        <p><strong>Why it is correct:</strong> The test checks whether a human judge can distinguish the machine from a human through responses.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>B</td><td>It is not a physical test.</td></tr><tr><td>C</td><td>Emotion is not the measured target.</td></tr><tr><td>D</td><td>Math ability alone is not the test.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Turing Test = human-like behaviour in answers.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 3</div>
+        <h3>In logical arguments, what are premises?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Statements that provide the conclusion directly</li><li><strong>B.</strong> Statements that provide evidence supporting a conclusion</li><li><strong>C.</strong> The final statements that need no further support</li><li><strong>D.</strong> The questions raised during the argumentation process</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> Premises are the supporting statements used to reach a conclusion.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Premises support a conclusion, they are not the conclusion itself.</td></tr><tr><td>C</td><td>That describes the conclusion.</td></tr><tr><td>D</td><td>Questions are not premises.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Premises are the reasons; the conclusion is the result.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 4</div>
+        <h3>In the context of logical reasoning, what does &#x27;Modus Tollens&#x27; infer?</h3>
+        <ol class="option-list"><li><strong>A.</strong> If P implies Q and Q is true, then P is also true</li><li><strong>B.</strong> If P implies Q and P is true, then Q must be true</li><li><strong>C.</strong> If P implies Q and Q is false, then P must also be false</li><li><strong>D.</strong> If P implies Q and P is false, then Q must also be false</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: C</span></div>
+        <p><strong>Why it is correct:</strong> Modus Tollens means P -&gt; Q, not Q, therefore not P.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Q being true does not prove P.</td></tr><tr><td>B</td><td>This is Modus Ponens.</td></tr><tr><td>D</td><td>P being false does not prove Q is false.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Deny Q, then deny P.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 5</div>
+        <h3>In predicate logic, what is a quantifier, such as universal or existential quantifier?</h3>
+        <ol class="option-list"><li><strong>A.</strong> A symbol indicating the scope of variables</li><li><strong>B.</strong> A mathematical operator</li><li><strong>C.</strong> A type of logical connector</li><li><strong>D.</strong> A truth value</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: A</span></div>
+        <p><strong>Why it is correct:</strong> Quantifiers tell whether a statement applies to all items or at least one item in the variable range.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>B</td><td>It is not mainly a calculation operator.</td></tr><tr><td>C</td><td>Connectors join statements; quantifiers control variables.</td></tr><tr><td>D</td><td>Truth values are true/false, not quantifiers.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> For all and exists are variable-scope words.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 6</div>
+        <h3>Which of these is a method used in AI to represent knowledge?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Binary encoding</li><li><strong>B.</strong> Semantic networks</li><li><strong>C.</strong> Quantum computation</li><li><strong>D.</strong> Physical data modelling</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> Semantic networks are listed as a knowledge representation method.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Binary encoding stores data, but it is not the named AI knowledge representation method here.</td></tr><tr><td>C</td><td>Quantum computation is not a knowledge representation method in the notes.</td></tr><tr><td>D</td><td>Physical modelling is not the listed AI method.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Knowledge representation methods include logic, semantic networks, and rules.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 7</div>
+        <h3>In forward chaining, where does the reasoning process begin?</h3>
+        <ol class="option-list"><li><strong>A.</strong> With the conclusion</li><li><strong>B.</strong> With the most complex rule</li><li><strong>C.</strong> With known facts</li><li><strong>D.</strong> With user input</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: C</span></div>
+        <p><strong>Why it is correct:</strong> Forward chaining is data-driven: it starts from known facts and fires rules forward.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Starting with the conclusion is backward chaining.</td></tr><tr><td>B</td><td>Rule complexity is not the starting point.</td></tr><tr><td>D</td><td>User input can become facts, but the reasoning starts from facts.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Forward = facts first.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 8</div>
+        <h3>Which of the following is NOT a component of an expert system?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Loss function</li><li><strong>B.</strong> Knowledge base</li><li><strong>C.</strong> Inference engine</li><li><strong>D.</strong> Explanation facility</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: A</span></div>
+        <p><strong>Why it is correct:</strong> The expert-system components in the notes include knowledge base, inference engine, and explanation/user support. A loss function belongs to model training, not expert systems.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>B</td><td>Knowledge base is a core expert-system component.</td></tr><tr><td>C</td><td>Inference engine is core because it applies rules.</td></tr><tr><td>D</td><td>Explanation facility is part of explaining expert-system decisions.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Expert systems are rule-and-knowledge systems, not loss-function training systems.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 9</div>
+        <h3>Heuristic functions in search algorithms are used to:</h3>
+        <ol class="option-list"><li><strong>A.</strong> Guarantee the shortest path to the goal</li><li><strong>B.</strong> Estimate the cost to reach the goal from the current state</li><li><strong>C.</strong> Randomly select the next move in a search algorithm</li><li><strong>D.</strong> Ensure completeness in search strategies</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> Heuristics estimate which node looks closer or more promising toward the goal.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>A heuristic does not always guarantee the shortest path.</td></tr><tr><td>C</td><td>It is guided, not random.</td></tr><tr><td>D</td><td>A heuristic alone does not guarantee completeness.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Heuristic = useful estimate, not a promise.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 10</div>
+        <h3>Which type of machine learning is characterized by learning with labelled data?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Unsupervised Learning</li><li><strong>B.</strong> Reinforcement Learning</li><li><strong>C.</strong> Predictive Learning</li><li><strong>D.</strong> Supervised Learning</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: D</span></div>
+        <p><strong>Why it is correct:</strong> Supervised learning uses labelled examples with input and target output.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Unsupervised learning uses unlabelled data.</td></tr><tr><td>B</td><td>Reinforcement learning uses rewards from actions.</td></tr><tr><td>C</td><td>Predictive learning is not the main category used here.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Labelled data = supervised learning.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 11</div>
+        <h3>Which of the following is NOT a type of machine learning algorithm?</h3>
+        <ol class="option-list"><li><strong>A.</strong> K-means clustering</li><li><strong>B.</strong> SVM classifier</li><li><strong>C.</strong> PageRank algorithm</li><li><strong>D.</strong> K-nearest neighbours&#x27; regression</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: C</span></div>
+        <p><strong>Why it is correct:</strong> K-means, SVM, and KNN are taught as ML methods. PageRank is not presented as a machine learning algorithm in these notes.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>K-means is an unsupervised clustering algorithm.</td></tr><tr><td>B</td><td>SVM is a supervised classifier.</td></tr><tr><td>D</td><td>KNN can be used for regression.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Look for the odd one outside the ML model list.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 12</div>
+        <h3>Which type of machine learning is used by AI like AlphaGo to enhance gameplay strategies?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Reinforcement Learning</li><li><strong>B.</strong> Supervised Learning</li><li><strong>C.</strong> Unsupervised Learning</li><li><strong>D.</strong> Passive Learning</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: A</span></div>
+        <p><strong>Why it is correct:</strong> Game strategy learned through trial, action, and reward matches reinforcement learning.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>B</td><td>Supervised learning needs labelled examples.</td></tr><tr><td>C</td><td>Unsupervised learning finds hidden patterns.</td></tr><tr><td>D</td><td>Passive learning is not the category used in the notes.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Games with rewards and moves usually point to reinforcement learning.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 13</div>
+        <h3>In evaluating classification models, what does the precision metric measure?</h3>
+        <ol class="option-list"><li><strong>A.</strong> The proportion of actual positive cases correctly identified.</li><li><strong>B.</strong> The proportion of positive predictions that are correct.</li><li><strong>C.</strong> The proportion of negative predictions that are correct.</li><li><strong>D.</strong> The overall accuracy of the model.</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> Precision checks, out of the items predicted positive, how many were actually correct.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>This describes recall.</td></tr><tr><td>C</td><td>That describes negative predictive correctness, not precision.</td></tr><tr><td>D</td><td>Overall accuracy counts all correct predictions.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Precision = predicted positive and correct.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 14</div>
+        <h3>In a decision tree, pruning is used to:</h3>
+        <ol class="option-list"><li><strong>A.</strong> Increase the depth of the tree</li><li><strong>B.</strong> Improve computational efficiency by adding nodes</li><li><strong>C.</strong> Prevent overfitting by removing branches</li><li><strong>D.</strong> Convert the tree into a random forest</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: C</span></div>
+        <p><strong>Why it is correct:</strong> Pruning removes unnecessary branches so the tree does not fit training noise too closely.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Pruning usually reduces depth.</td></tr><tr><td>B</td><td>It removes rather than adds nodes.</td></tr><tr><td>D</td><td>A random forest is many trees, not one pruned tree.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Pruning = cut branches to reduce overfitting.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 15</div>
+        <h3>What is the primary goal of linear regression?</h3>
+        <ol class="option-list"><li><strong>A.</strong> To find the line that best fits the relationship between variables</li><li><strong>B.</strong> To classify data points into distinct categories</li><li><strong>C.</strong> To identify the most important features in a dataset</li><li><strong>D.</strong> To group similar data points together</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: A</span></div>
+        <p><strong>Why it is correct:</strong> Linear regression models a continuous relationship using a best-fitting line.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>B</td><td>That is classification.</td></tr><tr><td>C</td><td>That is feature selection/importance.</td></tr><tr><td>D</td><td>That is clustering.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Linear regression = best-fit line for continuous values.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 16</div>
+        <h3>Logistic regression can be used for:</h3>
+        <ol class="option-list"><li><strong>A.</strong> Regression problems only</li><li><strong>B.</strong> Classification problems only</li><li><strong>C.</strong> Both classification and regression problems</li><li><strong>D.</strong> Unsupervised learning tasks</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> Despite its name, logistic regression is used for classification in these notes.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>The name is misleading; it is not used only for regression.</td></tr><tr><td>C</td><td>The expected exam category is classification.</td></tr><tr><td>D</td><td>It is supervised, not unsupervised.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Logistic regression predicts classes.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 17</div>
+        <h3>Which of the following is an unsupervised machine learning algorithm?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Support Vector Machine</li><li><strong>B.</strong> Random Forest</li><li><strong>C.</strong> Principal Component Analysis</li><li><strong>D.</strong> Linear Regression</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: C</span></div>
+        <p><strong>Why it is correct:</strong> PCA is used without labels for dimensionality reduction and feature extraction.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>SVM is supervised.</td></tr><tr><td>B</td><td>Random forest is supervised for classification/regression.</td></tr><tr><td>D</td><td>Linear regression is supervised.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> PCA belongs with unsupervised feature extraction.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 18</div>
+        <h3>The term &#x27;deep&#x27; in deep learning refers to:</h3>
+        <ol class="option-list"><li><strong>A.</strong> The number of layers in a neural network</li><li><strong>B.</strong> The depth of understanding by the AI system</li><li><strong>C.</strong> The complexity of the algorithms used</li><li><strong>D.</strong> The amount of data required</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: A</span></div>
+        <p><strong>Why it is correct:</strong> The notes explain deep learning as neural networks with multiple hidden layers.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>B</td><td>It is not about human-like depth of understanding.</td></tr><tr><td>C</td><td>Complexity may increase, but the term points to layers.</td></tr><tr><td>D</td><td>Deep learning often needs lots of data, but &#x27;deep&#x27; means layers.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Deep = many layers.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 19</div>
+        <h3>Which machine learning technique is specifically designed for sequence data?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Convolutional Neural Networks</li><li><strong>B.</strong> Recurrent Neural Networks</li><li><strong>C.</strong> Random Forests</li><li><strong>D.</strong> Support Vector Machines</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> RNNs have memory/loops and are suited to sequences such as language or time series.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>CNNs are mainly for image/spatial data.</td></tr><tr><td>C</td><td>Random forests are general tree ensembles.</td></tr><tr><td>D</td><td>SVMs are traditional classifiers, not specifically sequence models.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Sequence data = RNN.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 20</div>
+        <h3>GPT models like GPT-4 are based on:</h3>
+        <ol class="option-list"><li><strong>A.</strong> Recurrent neural networks</li><li><strong>B.</strong> Convolutional neural networks</li><li><strong>C.</strong> Markov decision processes</li><li><strong>D.</strong> Transformer architectures</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: D</span></div>
+        <p><strong>Why it is correct:</strong> The generative AI notes name transformer architecture as the backbone for modern NLP models including GPT.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>GPT is not mainly RNN-based in the notes.</td></tr><tr><td>B</td><td>CNNs are for images/spatial data.</td></tr><tr><td>C</td><td>Markov decision processes relate more to reinforcement learning.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> GPT and BERT go with transformers.</p>
+      </article>
+    </div>
+        <div class="section-title">Section B - Structured Answers</div>
+        <div class="paper-stack">
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 1</div>
+        <h3>Question 1 - Semantic network for birds, penguins, bats, mammals, and animals [8 marks]</h3>
+        <p><strong>Question rewritten:</strong> Construct a semantic network from the given animal statements.</p>
+        <div class="paper-diagram diagram-box"><pre class="mermaid">flowchart TD
+  Penguin[&quot;Penguin&quot;] --&gt;|&quot;is a&quot;| Bird[&quot;Bird&quot;]
+  Bird --&gt;|&quot;has&quot;| Wings[&quot;Wings&quot;]
+  Bird --&gt;|&quot;can&quot;| Fly[&quot;Fly&quot;]
+  Penguin --&gt;|&quot;cannot&quot;| NotFly[&quot;Fly&quot;]
+  Bat[&quot;Bat&quot;] --&gt;|&quot;can&quot;| Fly
+  Bat --&gt;|&quot;is a&quot;| Mammal[&quot;Mammal&quot;]
+  Mammal --&gt;|&quot;is a&quot;| Animal[&quot;Animal&quot;]
+  Animal --&gt;|&quot;can&quot;| Move[&quot;Move&quot;]</pre></div>
+        <div class="structured-answer"><ul class='mark-list'><li>Draw Bird, Penguin, Bat, Mammal, Animal, Wings, Fly, and Move as nodes.</li><li>Connect Penguin to Bird using 'is a'.</li><li>Connect Bird to Wings using 'has'.</li><li>Connect Bird to Fly using 'can'.</li><li>Add Penguin to Fly using 'cannot' to show the exception.</li><li>Connect Bat to Fly using 'can'.</li><li>Connect Bat to Mammal and Mammal to Animal using 'is a'.</li><li>Connect Animal to Move using 'can'.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> When there is an exception, draw it clearly instead of hiding it.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 2</div>
+        <h3>Question 2 - Best-first search to goal K [4 marks]</h3>
+        <p><strong>Question rewritten:</strong> Using the search tree, list the order of visited nodes using best-first search. Lower heuristic value is treated as more promising.</p>
+        <div class="paper-diagram diagram-box"><pre class="mermaid">flowchart TD
+  A[&quot;A&quot;] --&gt; B[&quot;B h=8&quot;]
+  A --&gt; C[&quot;C h=13&quot;]
+  A --&gt; D[&quot;D h=11&quot;]
+  B --&gt; E[&quot;E h=4&quot;]
+  B --&gt; F[&quot;F h=2&quot;]
+  C --&gt; G[&quot;G h=3&quot;]
+  D --&gt; H[&quot;H h=5&quot;]
+  D --&gt; J[&quot;J h=7&quot;]
+  J --&gt; K[&quot;K h=1 goal&quot;]</pre></div>
+        <div class="structured-answer"><ul class='mark-list'><li>Start at A.</li><li>Available children are B(8), C(13), D(11); choose B because 8 is the smallest.</li><li>After expanding B, choose F(2), then E(4), because they are the best values in the open list.</li><li>Continue with D(11), then H(5), then J(7), then K(1). Final order: A, B, F, E, D, H, J, K.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> Best-first search keeps an open list and always chooses the currently best heuristic value.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 3</div>
+        <h3>Question 3 - Propositional and predicate logic [10 marks]</h3>
+        <p><strong>Question rewritten:</strong> Translate the umbrella statements and predicate statements.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>(a) If I do not carry an umbrella and it is raining, I will get wet: <code>(&not;q &and; p) &rarr; r</code>.</li><li>(b) If I get wet, then either it is raining or I did not carry an umbrella: <code>r &rarr; (p &or; &not;q)</code>.</li><li>(b)(i) Not every black car is Proton: <code>&not;&forall;x((Black(x) &and; Car(x)) &rarr; Proton(x))</code>.</li><li>Equivalent form: <code>&exist;x(Black(x) &and; Car(x) &and; &not;Proton(x))</code>.</li><li>(b)(ii) Everybody likes something: <code>&forall;x(Person(x) &rarr; &exist;y Likes(x,y))</code>.</li><li>You may shorten it to <code>&forall;x &exist;y Likes(x,y)</code> if the domain is people.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> &#x27;Not every&#x27; usually becomes &#x27;there exists at least one that is not&#x27;.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 4</div>
+        <h3>Question 4 - Scenario task and learning type [10 marks]</h3>
+        <p><strong>Question rewritten:</strong> Identify task type and learning type for each scenario.</p>
+        
+        <div class="structured-answer"><table class="exam-table"><thead><tr><th>Scenario</th><th>Task type</th><th>Learning type</th><th>Reason</th></tr></thead><tbody><tr><td>Predicting house prices from size, location, and rooms</td><td>Regression</td><td>Supervised</td><td>House price is a continuous number learned from examples.</td></tr><tr><td>Adjusting thermostat temperature from weather and preferences</td><td>Control</td><td>Reinforcement</td><td>The system chooses an action/control setting and can improve from feedback.</td></tr><tr><td>Detecting anomalies in network traffic</td><td>Clustering/anomaly grouping</td><td>Unsupervised</td><td>No labels are stated, so the system finds unusual patterns.</td></tr><tr><td>Grouping bank customers by spending patterns</td><td>Clustering</td><td>Unsupervised</td><td>The task is grouping without predefined labels.</td></tr><tr><td>Robot learns to navigate a maze</td><td>Control</td><td>Reinforcement</td><td>Learning by actions and outcomes matches reinforcement learning.</td></tr></tbody></table></div>
+        <p class="paper-tip"><strong>Tip:</strong> Control tasks choose actions; clustering tasks discover groups.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 5</div>
+        <h3>Question 5 - Differences [6 marks]</h3>
+        <p><strong>Question rewritten:</strong> Differentiate classification vs regression, overfitting vs underfitting, and decision trees vs random forest.</p>
+        
+        <div class="structured-answer"><table class="exam-table"><thead><tr><th>Compared area</th><th>Item 1</th><th>Item 2</th><th>Exam phrase</th></tr></thead><tbody><tr><td>Output type</td><td>Classification predicts a class or label.</td><td>Regression predicts a continuous number.</td><td>Label = classification; number = regression.</td></tr><tr><td>Model problem</td><td>Overfitting learns training noise and performs poorly on test data.</td><td>Underfitting is too simple and performs poorly because it misses the pattern.</td><td>Training great/test bad = overfit; both bad = underfit.</td></tr><tr><td>Tree model</td><td>A decision tree is one tree.</td><td>A random forest combines many trees and votes or averages.</td><td>One tree vs many trees.</td></tr></tbody></table></div>
+        <p class="paper-tip"><strong>Tip:</strong> Each difference answer should name one area, then contrast both sides.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 6</div>
+        <h3>Question 6 - Forward chaining for feeling relaxed [5 marks]</h3>
+        <p><strong>Question rewritten:</strong> Facts: it is summer, it is afternoon, it is a weekend. Rules derive sunny, warm, free time, walking, and relaxed.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>Start facts: summer, afternoon, weekend.</li><li>Fire Rule 3: summer -> sunny.</li><li>Fire Rule 4: afternoon -> warm, and Rule 5: weekend -> free time.</li><li>Fire Rule 1: sunny AND warm -> go walking.</li><li>Fire Rule 2: go walking AND free time -> feel relaxed. Conclusion: yes, 'you feel relaxed' can be inferred.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> Forward chaining starts with facts and keeps adding new facts until the goal appears.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 7</div>
+        <h3>Question 7 - k-NN and 4-input neuron [9 marks]</h3>
+        <p><strong>Question rewritten:</strong> Predict label for point (3,5) using k=2, then calculate the neuron output.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>Distance to A(2,3): sqrt((3-2)^2 + (5-3)^2) = sqrt(5) = 2.24, label Yes.</li><li>Distance to B(5,8): sqrt(13) = 3.61, label No.</li><li>Distance to C(6,9): sqrt(25) = 5.00, label No.</li><li>Distance to D(3,4): sqrt(1) = 1.00, label Yes.</li><li>The two nearest neighbours are D and A.</li><li>Both nearest labels are Yes, so predicted label = Yes.</li><li>Neuron z = (1)(0.2) + (2)(0.2) + (3)(0.1) + (0)(0.4) - 0.9.</li><li>z = 0.2 + 0.4 + 0.3 + 0 - 0.9 = 0.</li><li>Since z >= 0, output = 1.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> For k-NN, calculate all distances first, sort, then vote.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 8</div>
+        <h3>Question 8 - Tumour image classification [6 marks]</h3>
+        <p><strong>Question rewritten:</strong> CT scan images are labelled malignant or non-malignant.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>Use supervised learning because each CT image already has a label.</li><li>The task is classification because the output is malignant or non-malignant.</li><li>A suitable model is a CNN because CNNs are used for image data.</li><li>Evaluate with accuracy to see overall correctness.</li><li>Use precision to check how many predicted malignant cases are correct.</li><li>Use recall/F1-score because missing harmful tumours is important.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> Labelled medical images = supervised image classification, usually CNN.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 9</div>
+        <h3>Question 9 - Generative AI for marketing and game NPCs [4 marks]</h3>
+        <p><strong>Question rewritten:</strong> Propose at least two uses for each case.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>Marketing: generate personalised ad copy for different customer groups.</li><li>Marketing: generate product descriptions, social posts, and email campaign drafts.</li><li>Game NPCs: generate varied dialogue so characters do not repeat the same lines.</li><li>Game NPCs: generate different character backstories, behaviours, or quest ideas.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> Generative AI answers should focus on creating new content.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 10</div>
+        <h3>Question 10 - Fuzzy logic for car speed in traffic jam [8 marks]</h3>
+        <p><strong>Question rewritten:</strong> Use distance to the car in front and speed of the car in front to control car speed.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>Input linguistic variable 1: Distance to car in front.</li><li>Distance values: very close, close, medium, far.</li><li>Input linguistic variable 2: Speed of car in front.</li><li>Front-car speed values: stopped, slow, medium, fast.</li><li>Output linguistic variable: Own car speed.</li><li>Own-car speed values: stop, slow, medium, fast.</li><li>Rule 1: IF distance is very close AND front-car speed is stopped THEN own-car speed is stop.</li><li>Rule 2: IF distance is far AND front-car speed is fast THEN own-car speed is fast.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> Fuzzy answers use words as values, then IF condition THEN action rules.</p>
+      </article>
+    </div>
+      </section>
+    
+      <section class="page past-paper-page" id="past-sem2-2425">
+        <div class="page-header">
+          <div class="page-tag">Past Paper Answers</div>
+          <h1 class="page-title">Past Paper Answers - Semester 2 2024/2025</h1>
+          <p class="page-desc">CSNB4133 -AI -Final Exam - Sem 2 2024 2025.pdf. Answers are written from the provided AI lecture notes and the question paper content only.</p>
+        </div>
+        <div class="grid-3 paper-summary">
+          <div class="card card-accent"><div class="card-title">Section A</div><div class="big-num">20</div><p>Every MCQ includes all options, answer, explanation, false-option reasons, and a memory tip.</p></div>
+          <div class="card card-green"><div class="card-title">Section B</div><div class="big-num">10</div><p>Structured answers use bullets, tables for comparisons, calculations, and diagrams where needed.</p></div>
+          <div class="card card-yellow"><div class="card-title">Exam Focus</div><div class="big-num">AI</div><p>Logic, search, semantic networks, fuzzy logic, ML, neural networks, and generative AI.</p></div>
+        </div>
+        <div class="section-title">Section A - Multiple Choice Answers</div>
+        <div class="paper-stack">
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 1</div>
+        <h3>What is the primary aim of Artificial Intelligence (AI)?</h3>
+        <ol class="option-list"><li><strong>A.</strong> To develop intelligent machines that exceed human cognitive abilities</li><li><strong>B.</strong> To automate human jobs using machines</li><li><strong>C.</strong> To enable computers to perform tasks requiring human-like intelligence</li><li><strong>D.</strong> To construct robots designed for physical labor</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: C</span></div>
+        <p><strong>Why it is correct:</strong> The AI introduction defines AI as enabling computers or machines to do tasks that normally require human-like intelligence.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>The notes define AI by human-like task performance, not necessarily exceeding all human cognitive ability.</td></tr><tr><td>B</td><td>Job automation can happen, but it is not the primary aim.</td></tr><tr><td>D</td><td>Robots are only one possible physical application of AI.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Use the broad definition: AI performs tasks that normally need human intelligence.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 2</div>
+        <h3>What was the Turing Test designed to determine?</h3>
+        <ol class="option-list"><li><strong>A.</strong> That a machine can exhibit indistinguishable behaviour from a human</li><li><strong>B.</strong> The physical abilities of a machine</li><li><strong>C.</strong> The emotional capacity of a computer</li><li><strong>D.</strong> The ability of a computer to solve mathematical problems</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: A</span></div>
+        <p><strong>Why it is correct:</strong> The test checks whether a human judge can distinguish the machine from a human through responses.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>B</td><td>It is not a physical test.</td></tr><tr><td>C</td><td>Emotion is not the measured target.</td></tr><tr><td>D</td><td>Math ability alone is not the test.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Turing Test = human-like behaviour in answers.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 3</div>
+        <h3>In logical arguments, what are premises?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Statements that provide the conclusion directly</li><li><strong>B.</strong> Statements that provide evidence supporting a conclusion</li><li><strong>C.</strong> The final statements that need no further support</li><li><strong>D.</strong> The questions raised during the argumentation process</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> Premises are the supporting statements used to reach a conclusion.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Premises support a conclusion, they are not the conclusion itself.</td></tr><tr><td>C</td><td>That describes the conclusion.</td></tr><tr><td>D</td><td>Questions are not premises.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Premises are the reasons; the conclusion is the result.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 4</div>
+        <h3>In logic, what principle does &#x27;Modus Tollens&#x27; follow?</h3>
+        <ol class="option-list"><li><strong>A.</strong> If P implies Q and Q is true, then P is also true</li><li><strong>B.</strong> If P implies Q and P is true, then Q must be true</li><li><strong>C.</strong> If P implies Q and Q is false, then P must also be false</li><li><strong>D.</strong> If P implies Q and P is false, then Q must also be false</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: C</span></div>
+        <p><strong>Why it is correct:</strong> Modus Tollens is P -&gt; Q, not Q, therefore not P.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Q true does not prove P.</td></tr><tr><td>B</td><td>This is Modus Ponens.</td></tr><tr><td>D</td><td>P false does not prove Q false.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Modus Tollens denies the result first.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 5</div>
+        <h3>What is the role of a quantifier in predicate logic?</h3>
+        <ol class="option-list"><li><strong>A.</strong> A notation that specifies the range of variables in logic</li><li><strong>B.</strong> A mathematical symbol used for calculations</li><li><strong>C.</strong> A connector that links logical statements</li><li><strong>D.</strong> A numerical truth indicator</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: A</span></div>
+        <p><strong>Why it is correct:</strong> A quantifier states the scope of a variable, such as all objects or at least one object.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>B</td><td>It is not used mainly for arithmetic.</td></tr><tr><td>C</td><td>Connectors are AND, OR, IF and similar links.</td></tr><tr><td>D</td><td>Truth values are true/false, not variable scope.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Quantifier = all or some.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 6</div>
+        <h3>Which of these is a method used in AI to represent knowledge?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Binary encoding</li><li><strong>B.</strong> Semantic networks</li><li><strong>C.</strong> Quantum computation</li><li><strong>D.</strong> Physical data modelling</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> Semantic networks are listed as a knowledge representation method.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Binary encoding stores data, but it is not the named AI knowledge representation method here.</td></tr><tr><td>C</td><td>Quantum computation is not a knowledge representation method in the notes.</td></tr><tr><td>D</td><td>Physical modelling is not the listed AI method.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Knowledge representation methods include logic, semantic networks, and rules.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 7</div>
+        <h3>In forward chaining, where does the reasoning process begin?</h3>
+        <ol class="option-list"><li><strong>A.</strong> With the conclusion</li><li><strong>B.</strong> With the most complex rule</li><li><strong>C.</strong> With known facts</li><li><strong>D.</strong> With user input</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: C</span></div>
+        <p><strong>Why it is correct:</strong> Forward chaining is data-driven: it starts from known facts and fires rules forward.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Starting with the conclusion is backward chaining.</td></tr><tr><td>B</td><td>Rule complexity is not the starting point.</td></tr><tr><td>D</td><td>User input can become facts, but the reasoning starts from facts.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Forward = facts first.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 8</div>
+        <h3>What is the primary function of an expert system in artificial intelligence?</h3>
+        <ol class="option-list"><li><strong>A.</strong> A system that simulates human decision-making by utilizing a structured knowledge base</li><li><strong>B.</strong> A machine learning model that evolves independently without human supervision</li><li><strong>C.</strong> A software designed to completely replace human expertise in all domains</li><li><strong>D.</strong> A tool that depends only on statistical analysis for making predictions</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: A</span></div>
+        <p><strong>Why it is correct:</strong> Expert systems imitate expert decision-making using a knowledge base and an inference process.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>B</td><td>Expert systems are rule/knowledge based, not self-evolving unsupervised models.</td></tr><tr><td>C</td><td>They support expert reasoning in a domain, not all domains.</td></tr><tr><td>D</td><td>They do not depend only on statistics.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Expert system = knowledge base plus inference like a human expert.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 9</div>
+        <h3>In forward chaining, what is the primary approach used to derive conclusions?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Starting with the goal and working backward to find supporting facts</li><li><strong>B.</strong> Beginning with known facts and applying rules to reach a conclusion</li><li><strong>C.</strong> Randomly selecting rules to explore possible outcomes</li><li><strong>D.</strong> Using heuristic functions to estimate the best path</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> Forward chaining begins with facts and applies rules until new conclusions are reached.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>That is backward chaining.</td></tr><tr><td>C</td><td>Forward chaining is rule-driven, not random.</td></tr><tr><td>D</td><td>Heuristics belong to search, not rule firing here.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Forward chaining = facts drive conclusions.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 10</div>
+        <h3>Which type of machine learning is characterized by learning with labelled data?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Unsupervised Learning</li><li><strong>B.</strong> Reinforcement Learning</li><li><strong>C.</strong> Predictive Learning</li><li><strong>D.</strong> Supervised Learning</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: D</span></div>
+        <p><strong>Why it is correct:</strong> Supervised learning uses labelled examples with input and target output.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Unsupervised learning uses unlabelled data.</td></tr><tr><td>B</td><td>Reinforcement learning uses rewards from actions.</td></tr><tr><td>C</td><td>Predictive learning is not the main category used here.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Labelled data = supervised learning.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 11</div>
+        <h3>Which of the following is NOT a type of machine learning algorithm?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Decision Tree</li><li><strong>B.</strong> Random Forest</li><li><strong>C.</strong> Djikstra Algorithm</li><li><strong>D.</strong> Gradient Booster</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: C</span></div>
+        <p><strong>Why it is correct:</strong> Decision trees, random forests, and gradient boosting are ML methods. Dijkstra&#x27;s algorithm is a graph shortest-path algorithm, not listed as an ML algorithm here.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Decision tree is a machine learning algorithm.</td></tr><tr><td>B</td><td>Random forest is an ensemble ML algorithm.</td></tr><tr><td>D</td><td>Gradient boosting is a machine learning ensemble method.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> The odd one is the graph path algorithm.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 12</div>
+        <h3>Which type of machine learning is used by AI like AlphaGo to enhance gameplay strategies?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Reinforcement Learning</li><li><strong>B.</strong> Supervised Learning</li><li><strong>C.</strong> Unsupervised Learning</li><li><strong>D.</strong> Passive Learning</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: A</span></div>
+        <p><strong>Why it is correct:</strong> Game strategy learned through trial, action, and reward matches reinforcement learning.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>B</td><td>Supervised learning needs labelled examples.</td></tr><tr><td>C</td><td>Unsupervised learning finds hidden patterns.</td></tr><tr><td>D</td><td>Passive learning is not the category used in the notes.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Games with rewards and moves usually point to reinforcement learning.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 13</div>
+        <h3>In evaluating classification models, what does the precision metric measure?</h3>
+        <ol class="option-list"><li><strong>A.</strong> The proportion of actual positive cases correctly identified.</li><li><strong>B.</strong> The proportion of positive predictions that are correct.</li><li><strong>C.</strong> The proportion of negative predictions that are correct.</li><li><strong>D.</strong> The overall accuracy of the model.</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> Precision checks, out of the items predicted positive, how many were actually correct.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>This describes recall.</td></tr><tr><td>C</td><td>That describes negative predictive correctness, not precision.</td></tr><tr><td>D</td><td>Overall accuracy counts all correct predictions.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Precision = predicted positive and correct.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 14</div>
+        <h3>If I like this subject, I will do revision for this subject. I will not do revision for this subject. Therefore, I do not like this subject. The above statement is the example for _______.</h3>
+        <ol class="option-list"><li><strong>A.</strong> Modus Ponens</li><li><strong>B.</strong> Double Negation</li><li><strong>C.</strong> Modus Tollens</li><li><strong>D.</strong> Equivalence Elimination</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: C</span></div>
+        <p><strong>Why it is correct:</strong> The form is P -&gt; Q, not Q, therefore not P, which is Modus Tollens.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>Modus Ponens would be P -&gt; Q and P, therefore Q.</td></tr><tr><td>B</td><td>There is no double negative being removed.</td></tr><tr><td>D</td><td>No equivalence statement is being eliminated.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> When the second sentence denies the result, think Modus Tollens.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 15</div>
+        <h3>What is the main objective of using linear regression in data analysis?</h3>
+        <ol class="option-list"><li><strong>A.</strong> To predict a continuous outcome based on one or more predictor variables</li><li><strong>B.</strong> To categorize data into predefined groups</li><li><strong>C.</strong> To determine the most important variables in a dataset</li><li><strong>D.</strong> To cluster data points based on their similarities</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: A</span></div>
+        <p><strong>Why it is correct:</strong> Linear regression predicts continuous numerical outcomes from predictor variables.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>B</td><td>That is classification.</td></tr><tr><td>C</td><td>That is feature importance/selection.</td></tr><tr><td>D</td><td>That is clustering.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Regression predicts numbers that can vary continuously.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 16</div>
+        <h3>What type of problems can logistic regression be used for?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Regression problems only</li><li><strong>B.</strong> Classification problems only</li><li><strong>C.</strong> Both classification and regression problems</li><li><strong>D.</strong> Unsupervised learning tasks</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> Despite its name, logistic regression is used for classification in these notes.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>The name is misleading; it is not used only for regression.</td></tr><tr><td>C</td><td>The expected exam category is classification.</td></tr><tr><td>D</td><td>It is supervised, not unsupervised.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Logistic regression predicts classes.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 17</div>
+        <h3>Which of the following is an unsupervised machine learning algorithm?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Support Vector Machine</li><li><strong>B.</strong> Random Forest</li><li><strong>C.</strong> Principal Component Analysis</li><li><strong>D.</strong> Linear Regression</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: C</span></div>
+        <p><strong>Why it is correct:</strong> PCA is used without labels for dimensionality reduction and feature extraction.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>SVM is supervised.</td></tr><tr><td>B</td><td>Random forest is supervised for classification/regression.</td></tr><tr><td>D</td><td>Linear regression is supervised.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> PCA belongs with unsupervised feature extraction.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 18</div>
+        <h3>The term &#x27;deep&#x27; in deep learning refers to:</h3>
+        <ol class="option-list"><li><strong>A.</strong> The number of layers in a neural network</li><li><strong>B.</strong> The depth of understanding by the AI system</li><li><strong>C.</strong> The complexity of the algorithms used</li><li><strong>D.</strong> The amount of data required</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: A</span></div>
+        <p><strong>Why it is correct:</strong> The notes explain deep learning as neural networks with multiple hidden layers.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>B</td><td>It is not about human-like depth of understanding.</td></tr><tr><td>C</td><td>Complexity may increase, but the term points to layers.</td></tr><tr><td>D</td><td>Deep learning often needs lots of data, but &#x27;deep&#x27; means layers.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Deep = many layers.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 19</div>
+        <h3>Which machine learning technique is specifically designed for sequence data?</h3>
+        <ol class="option-list"><li><strong>A.</strong> Convolutional Neural Networks</li><li><strong>B.</strong> Recurrent Neural Networks</li><li><strong>C.</strong> Random Forests</li><li><strong>D.</strong> Support Vector Machines</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: B</span></div>
+        <p><strong>Why it is correct:</strong> RNNs have memory/loops and are suited to sequences such as language or time series.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>CNNs are mainly for image/spatial data.</td></tr><tr><td>C</td><td>Random forests are general tree ensembles.</td></tr><tr><td>D</td><td>SVMs are traditional classifiers, not specifically sequence models.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> Sequence data = RNN.</p>
+      </article>
+    
+      <article class="paper-question mcq-card">
+        <div class="question-kicker">Section A - MCQ 20</div>
+        <h3>GPT models like GPT-4 are based on:</h3>
+        <ol class="option-list"><li><strong>A.</strong> Recurrent neural networks</li><li><strong>B.</strong> Convolutional neural networks</li><li><strong>C.</strong> Markov decision processes</li><li><strong>D.</strong> Transformer architectures</li></ol>
+        <div class="answer-line"><span class="answer-badge">Answer: D</span></div>
+        <p><strong>Why it is correct:</strong> The generative AI notes name transformer architecture as the backbone for modern NLP models including GPT.</p>
+        <table class="exam-table small-table"><thead><tr><th>Other option</th><th>Why it is false</th></tr></thead><tbody><tr><td>A</td><td>GPT is not mainly RNN-based in the notes.</td></tr><tr><td>B</td><td>CNNs are for images/spatial data.</td></tr><tr><td>C</td><td>Markov decision processes relate more to reinforcement learning.</td></tr></tbody></table>
+        <p class="paper-tip"><strong>Tip:</strong> GPT and BERT go with transformers.</p>
+      </article>
+    </div>
+        <div class="section-title">Section B - Structured Answers</div>
+        <div class="paper-stack">
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 1</div>
+        <h3>Question 1 - Semantic network from Python relationships [6 marks]</h3>
+        <p><strong>Question rewritten:</strong> Draw nodes and directed edges from the relationships list: Flu-Fever, Flu-Running Nose, Flu-Sneezing, Fever-High Temperature, Flu-Allergic, Allergic-Sneezing.</p>
+        <div class="paper-diagram diagram-box"><pre class="mermaid">flowchart TD
+  Flu[&quot;Flu&quot;] --&gt; Fever[&quot;Fever&quot;]
+  Flu --&gt; RunningNose[&quot;Running Nose&quot;]
+  Flu --&gt; Sneezing[&quot;Sneezing&quot;]
+  Fever --&gt; HighTemp[&quot;High Temperature&quot;]
+  Flu --&gt; Allergic[&quot;Allergic&quot;]
+  Allergic --&gt; Sneezing</pre></div>
+        <div class="structured-answer"><ul class='mark-list'><li>Use Flu as a condition node.</li><li>Draw directed edges from Flu to Fever, Running Nose, Sneezing, and Allergic.</li><li>Use Fever as a node that connects to High Temperature.</li><li>Use Allergic as a node that connects to Sneezing.</li><li>Keep all arrows directed because the question asks for directed edges.</li><li>Do not merge Fever with High Temperature; the code makes them two connected nodes.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> In code-based semantic networks, copy each pair exactly as one arrow.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 2</div>
+        <h3>Question 2 - Differences [6 marks]</h3>
+        <p><strong>Question rewritten:</strong> Differentiate classification vs regression, overfitting vs underfitting, and decision trees vs random forest.</p>
+        
+        <div class="structured-answer"><table class="exam-table"><thead><tr><th>Compared area</th><th>Item 1</th><th>Item 2</th><th>Exam phrase</th></tr></thead><tbody><tr><td>Output type</td><td>Classification predicts a class or label.</td><td>Regression predicts a continuous number.</td><td>Label = classification; number = regression.</td></tr><tr><td>Model problem</td><td>Overfitting learns training noise and performs poorly on test data.</td><td>Underfitting is too simple and performs poorly because it misses the pattern.</td><td>Training great/test bad = overfit; both bad = underfit.</td></tr><tr><td>Tree model</td><td>A decision tree is one tree.</td><td>A random forest combines many trees and votes or averages.</td><td>One tree vs many trees.</td></tr></tbody></table></div>
+        <p class="paper-tip"><strong>Tip:</strong> A good difference answer names the compared area, then gives both sides.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 3</div>
+        <h3>Question 3 - Hill climbing and best-first search [7 marks]</h3>
+        <p><strong>Question rewritten:</strong> Search starts at A and goal is J. Lower heuristic value is more promising.</p>
+        <div class="paper-diagram diagram-box"><pre class="mermaid">flowchart LR
+  A[&quot;A&quot;] --&gt; D[&quot;D h=11&quot;]
+  A --&gt; C[&quot;C h=8&quot;]
+  A --&gt; B[&quot;B h=15&quot;]
+  D --&gt; I[&quot;I h=4&quot;]
+  D --&gt; H[&quot;H h=7&quot;]
+  H --&gt; J[&quot;J h=2 goal&quot;]
+  C --&gt; G[&quot;G h=13&quot;]
+  G --&gt; K[&quot;K h=12&quot;]
+  B --&gt; F[&quot;F h=16&quot;]
+  B --&gt; E[&quot;E h=24&quot;]</pre></div>
+        <div class="structured-answer"><ul class='mark-list'><li>Hill climbing in the lecture queue style orders each current node's children and puts them at the front.</li><li>At A, choose C(8) before D(11) and B(15).</li><li>Then follow C to G(13), then G to K(12), then backtrack to D.</li><li>From D, visit I(4), then H(7), then J(2). Hill-climbing order: A, C, G, K, D, I, H, J.</li><li>Best-first search uses the whole open list, not only the current branch.</li><li>Best-first order: A, C, D, I, H, J.</li><li>Note: if your lecturer treats hill climbing as no-backtracking greedy search, it gets stuck on the C-G-K branch and does not reach J.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> Hill climbing is locally ordered DFS; best-first keeps a globally sorted open list.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 4</div>
+        <h3>Question 4 - Fuzzy logic for vacuum suction [9 marks]</h3>
+        <p><strong>Question rewritten:</strong> Variables: amount of dust detected and type of floor surface. Build fuzzy variables and two fuzzy rules.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>Input linguistic variable 1: Amount of dust detected.</li><li>Dust values: low, medium, high.</li><li>Input linguistic variable 2: Type of floor surface.</li><li>Floor values: smooth floor, rug, carpet.</li><li>Output linguistic variable: Suction power.</li><li>Suction values: low, medium, high.</li><li>Rule 1: IF dust is high AND floor is carpet THEN suction power is high.</li><li>Rule 2: IF dust is low AND floor is smooth floor THEN suction power is low.</li><li>Although the question says 'car speed' in part (b), the variables clearly describe a vacuum cleaner, so answer using suction power.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> Fuzzy logic uses human words like low, medium, high instead of only exact numbers.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 5</div>
+        <h3>Question 5 - Logic expressions [6 marks]</h3>
+        <p><strong>Question rewritten:</strong> Let p = &#x27;AI is important&#x27;, q = &#x27;AI is lucrative&#x27;, and r = &#x27;AI is easy&#x27;. Then translate the statements and predicate sentence.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>(a)(i) AI is important, but it is not both lucrative and easy: <code>p &and; &not;(q &and; r)</code>.</li><li>(a)(ii) AI is not lucrative but it is important and easy: <code>&not;q &and; p &and; r</code>.</li><li>(b) No student is cheating: <code>&forall;x(Student(x) &rarr; &not;Cheating(x))</code>.</li><li>Equivalent answer: <code>&not;&exist;x(Student(x) &and; Cheating(x))</code>.</li><li>'But' is treated as AND in propositional logic.</li><li>'No student' can be written as 'all students are not cheating' or 'there does not exist a cheating student'.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> No = not exists. But = and.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 6</div>
+        <h3>Question 6 - Generative AI and marketing [5 marks]</h3>
+        <p><strong>Question rewritten:</strong> Define Generative AI and propose marketing uses for a health and wellness mobile app.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>Generative AI is AI that creates new content such as text, images, code, or other media from learned patterns.</li><li>It learns patterns and structures from data, then produces similar new outputs.</li><li>Use it to generate personalised ad copy for different wellness goals.</li><li>Use it to create social media posts, captions, and campaign messages quickly.</li><li>Use it to generate engagement content such as reminders, motivational messages, or chatbot replies for users.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> Define it with &#x27;creates new content&#x27;, then give content-generation examples.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 7</div>
+        <h3>Question 7 - Forward chaining for Adam&#x27;s health [5 marks]</h3>
+        <p><strong>Question rewritten:</strong> Fact: Adam eats fried chicken. Rules connect fried chicken to fried food, high sugar/fat intake, obesity risk, and not healthy.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>Start fact: Adam eats fried chicken.</li><li>Fire R3: fried chicken -> fried food.</li><li>Fire R2: fried food -> high sugar or fat intake.</li><li>Fire R5: high sugar or fat intake -> risk of obesity.</li><li>Fire R7: risk of obesity -> not healthy. R1, R4, and R6 do not fire, so the conclusion is Adam is not healthy.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> Forward chaining exam answers should show the rule firing sequence in order.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 8</div>
+        <h3>Question 8 - Food freshness image classification [6 marks]</h3>
+        <p><strong>Question rewritten:</strong> Food images are labelled fresh or spoiled.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>Use supervised learning because the images already have labels.</li><li>The task is classification because the output is fresh or spoiled.</li><li>A suitable model is a CNN because CNNs are designed for image data.</li><li>Accuracy shows overall correct predictions.</li><li>Precision shows how many predicted fresh/spoiled labels are correct.</li><li>Recall or F1-score helps check whether important cases are being missed.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> Labelled images almost always mean supervised CNN classification.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 9</div>
+        <h3>Question 9 - k-NN and neuron calculation [10 marks]</h3>
+        <p><strong>Question rewritten:</strong> Predict point (3,5) with k=2 and calculate a 4-input neuron.</p>
+        
+        <div class="structured-answer"><ul class='mark-list'><li>Distance to A(2,3): sqrt((3-2)^2 + (5-3)^2) = sqrt(5) = 2.24, label Yes.</li><li>Distance to B(5,8): sqrt((3-5)^2 + (5-8)^2) = sqrt(13) = 3.61, label No.</li><li>Distance to C(6,9): sqrt((3-6)^2 + (5-9)^2) = sqrt(25) = 5.00, label No.</li><li>Distance to D(3,4): sqrt((3-3)^2 + (5-4)^2) = sqrt(1) = 1.00, label Yes.</li><li>The two nearest neighbours are D and A.</li><li>Both nearest labels are Yes, so the predicted label is Yes.</li><li>Neuron weighted sum: z = (1)(0.2) + (2)(0.2) + (3)(0.1) + (0)(0.4) - 0.9.</li><li>z = 0.2 + 0.4 + 0.3 + 0 - 0.9.</li><li>z = 0.</li><li>Since z >= 0, the step function gives output 1.</li></ul></div>
+        <p class="paper-tip"><strong>Tip:</strong> For calculations, show the formula, the substituted values, and the final decision.</p>
+      </article>
+    
+      <article class="paper-question structured-card">
+        <div class="question-kicker">Section B - Question 10</div>
+        <h3>Question 10 - Task type and learning type [10 marks]</h3>
+        <p><strong>Question rewritten:</strong> Identify task and learning type for each scenario.</p>
+        
+        <div class="structured-answer"><table class="exam-table"><thead><tr><th>Scenario</th><th>Task type</th><th>Learning type</th><th>Reason</th></tr></thead><tbody><tr><td>Estimating a student&#x27;s final exam score</td><td>Regression</td><td>Supervised</td><td>The score is a continuous number learned from past labelled examples.</td></tr><tr><td>Adjusting smart light brightness</td><td>Control</td><td>Reinforcement</td><td>The system chooses an action setting and can improve from feedback.</td></tr><tr><td>Identifying whether a fruit is ripe or not</td><td>Classification</td><td>Supervised</td><td>Ripe/not ripe is a label.</td></tr><tr><td>Grouping shoppers by weekly purchasing behaviour</td><td>Clustering</td><td>Unsupervised</td><td>The store wants groups, not predefined labels.</td></tr><tr><td>Drone learns to land safely by trial and error</td><td>Control</td><td>Reinforcement</td><td>Trial and error with success/failure feedback is reinforcement learning.</td></tr></tbody></table></div>
+        <p class="paper-tip"><strong>Tip:</strong> Trial and error means reinforcement. Grouping means clustering.</p>
+      </article>
+    </div>
+      </section>
+    
+<!-- PAST_PAPER_ANSWERS_END -->
+
     </main>
   </div>
   <div id="toast" class="toast">Copied</div>
